@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Профиль пользователя</title>
+</head>
+<body>
+<h1>Профиль пользователя</h1>
+<h2>Информация о пользователе:</h2>
+<p>Имя: ${user.name}</p>
+<p>Email: ${user.email}</p>
+
+<h2>Список заказов:</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Дата заказа</th>
+        <th>Товар</th>
+    </tr>
+    <#list user.orders as order>
+    <tr>
+        <td>${order.id}</td>
+        <td>${order.orderDate}</td>
+        <td>${order.product.name}</td>
+    </tr>
+    #list>
+</table>
+</body>
+</html>

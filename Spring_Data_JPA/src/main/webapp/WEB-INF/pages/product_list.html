@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список товаров</title>
+</head>
+<body>
+<h1>Список товаров</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Цена</th>
+    </tr>
+    <#list products as product>
+    <tr>
+        <td>${product.id}</td>
+        <td>${product.name}</td>
+        <td>${product.description}</td>
+        <td>${product.price}</td>
+    </tr>
+    #list>
+</table>
+</body>
+</html>
